@@ -1,0 +1,118 @@
+<!--
+///////////////////////////////////////////////////////////////////////
+// File       : sudokusolver.html
+// Language   : HTML
+// Description: Main web page for the Sudoku Solver
+// Author     : Sandesh Prabhakar
+// Created    : November 5, 2025
+// Modified   : August 15, 2026
+// Version    : 1.0
+//
+// Copyright (c) 2026 Sandesh Prabhakar
+// All rights reserved
+////////////////////////////////////////////////////////////////////////
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sudoku Solver</title>
+        <link rel="stylesheet" href="sudokusolver.css">
+        <script src="sudokusolver.js"></script>
+    </head>
+    <body style="background-color:wheat">
+        <h1 style="font-family: Cursive; font-size: 60px; color:rgb(139,0,0)">Sudoku Solver</h1>
+        <p style="text-align: center">Sudoku Solver utility for Easy, Hard and Scary Sudokus
+        </p>
+
+        <div class="table-container">
+        <table style="border: 2px solid black">
+            <tr>
+            <th> </th> <th> </th> <th> </th> <th> </th><th><strong>IN</strong></th> <th> </th> <th> </th> <th> </th> <th> </th>
+            </tr>
+            <tr>
+                <td><input type="number" class="square-input" min="0" max="9" id="element11" name="element11"  required> </td> <td><input type="number" class="square-input" min="0" max="9" id="element12" name="element12"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element13" name="element13"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element14" name="element14"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element15" name="element15"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element16" name="element16"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element17" name="element17"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element18" name="element18"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element19" name="element19"  required></td>
+            </tr>
+
+            <tr>
+                <td><input type="number" class="square-input" min="0" max="9" id="element21" name="element21"  required> </td> <td><input type="number" class="square-input" min="0" max="9" id="element22" name="element22"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element23" name="element23"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element24" name="element24"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element25" name="element25"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element26" name="element26"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element27" name="element27"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element28" name="element28"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element29" name="element29"  required></td>
+            </tr>
+
+            <tr>
+                <td><input type="number" class="square-input" min="0" max="9" id="element31" name="element31"  required> </td> <td><input type="number" class="square-input" min="0" max="9" id="element32" name="element32"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element33" name="element33"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element34" name="element34"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element35" name="element35"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element36" name="element36"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element37" name="element37"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element38" name="element38"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element39" name="element39"  required></td>
+            </tr>
+
+            <tr>
+                <td><input type="number" class="square-input" min="0" max="9" id="element41" name="element41"  required> </td> <td><input type="number" class="square-input" min="0" max="9" id="element42" name="element42"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element43" name="element43"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element44" name="element44"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element45" name="element45"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element46" name="element46"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element47" name="element47"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element48" name="element48"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element49" name="element49"  required></td>
+            </tr>
+
+            <tr>
+                <td><input type="number" class="square-input" min="0" max="9" id="element51" name="element51"  required> </td> <td><input type="number" class="square-input" min="0" max="9" id="element52" name="element52"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element53" name="element53"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element54" name="element54"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element55" name="element55"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element56" name="element56"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element57" name="element57"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element58" name="element58"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element59" name="element59"  required></td>
+            </tr>
+
+            <tr>
+                <td><input type="number" class="square-input" min="0" max="9" id="element61" name="element61"  required> </td> <td><input type="number" class="square-input" min="0" max="9" id="element62" name="element62"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element63" name="element63"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element64" name="element64"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element65" name="element65"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element66" name="element66"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element67" name="element67"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element68" name="element68"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element69" name="element69"  required></td>
+            </tr>
+
+            <tr>
+                <td><input type="number" class="square-input" min="0" max="9" id="element71" name="element71"  required> </td> <td><input type="number" class="square-input" min="0" max="9" id="element72" name="element72"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element73" name="element73"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element74" name="element74"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element75" name="element75"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element76" name="element76"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element77" name="element77"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element78" name="element78"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element79" name="element79"  required></td>
+            </tr>
+
+            <tr>
+                <td><input type="number" class="square-input" min="0" max="9" id="element81" name="element81"  required> </td> <td><input type="number" class="square-input" min="0" max="9" id="element82" name="element82"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element83" name="element83"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element84" name="element84"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element85" name="element85"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element86" name="element86"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element87" name="element87"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element88" name="element88"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element89" name="element89"  required></td>
+            </tr>
+
+            <tr>
+                <td><input type="number" class="square-input" min="0" max="9" id="element91" name="element91"  required> </td> <td><input type="number" class="square-input" min="0" max="9" id="element92" name="element92"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element93" name="element93"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element94" name="element94"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element95" name="element95"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element96" name="element96"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element97" name="element97"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element98" name="element98"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="element99" name="element99"  required></td>
+            </tr>
+
+        </table>
+
+
+        <table style="border: 2px solid black">
+            <tr>
+            <th> </th> <th> </th> <th> </th> <th> </th><th><strong>OUT</strong></th> <th> </th> <th> </th> <th> </th> <th> </th>
+            </tr>
+
+            <tr>
+                <td><input type="number" class="square-input" min="0" max="9" id="o_element11" name="o_element11"  required> </td> <td><input type="number" class="square-input" min="0" max="9" id="o_element12" name="o_element12"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element13" name="o_element13"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element14" name="o_element14"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element15" name="o_element15"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element16" name="o_element16"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element17" name="o_element17"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element18" name="o_element18"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element19" name="o_element19"  required></td>
+            </tr>
+
+            <tr>
+                <td><input type="number" class="square-input" min="0" max="9" id="o_element21" name="o_element21"  required> </td> <td><input type="number" class="square-input" min="0" max="9" id="o_element22" name="o_element22"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element23" name="o_element23"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element24" name="o_element24"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element25" name="o_element25"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element26" name="o_element26"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element27" name="o_element27"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element28" name="o_element28"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element29" name="o_element29"  required></td>
+            </tr>
+
+            <tr>
+                <td><input type="number" class="square-input" min="0" max="9" id="o_element31" name="o_element31"  required> </td> <td><input type="number" class="square-input" min="0" max="9" id="o_element32" name="o_element32"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element33" name="o_element33"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element34" name="o_element34"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element35" name="o_element35"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element36" name="o_element36"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element37" name="o_element37"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element38" name="o_element38"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element39" name="o_element39"  required></td>
+            </tr>
+
+            <tr>
+                <td><input type="number" class="square-input" min="0" max="9" id="o_element41" name="o_element41"  required> </td> <td><input type="number" class="square-input" min="0" max="9" id="o_element42" name="o_element42"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element43" name="o_element43"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element44" name="o_element44"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element45" name="o_element45"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element46" name="o_element46"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element47" name="o_element47"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element48" name="o_element48"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element49" name="o_element49"  required></td>
+            </tr>
+
+            <tr>
+                <td><input type="number" class="square-input" min="0" max="9" id="o_element51" name="o_element51"  required> </td> <td><input type="number" class="square-input" min="0" max="9" id="o_element52" name="o_element52"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element53" name="o_element53"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element54" name="o_element54"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element55" name="o_element55"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element56" name="o_element56"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element57" name="o_element57"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element58" name="o_element58"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element59" name="o_element59"  required></td>
+            </tr>
+
+            <tr>
+                <td><input type="number" class="square-input" min="0" max="9" id="o_element61" name="o_element61"  required> </td> <td><input type="number" class="square-input" min="0" max="9" id="o_element62" name="o_element62"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element63" name="o_element63"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element64" name="o_element64"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element65" name="o_element65"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element66" name="o_element66"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element67" name="o_element67"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element68" name="o_element68"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element69" name="o_element69"  required></td>
+            </tr>
+
+            <tr>
+                <td><input type="number" class="square-input" min="0" max="9" id="o_element71" name="o_element71"  required> </td> <td><input type="number" class="square-input" min="0" max="9" id="o_element72" name="o_element72"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element73" name="o_element73"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element74" name="o_element74"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element75" name="o_element75"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element76" name="o_element76"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element77" name="o_element77"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element78" name="o_element78"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element79" name="o_element79"  required></td>
+            </tr>
+
+            <tr>
+                <td><input type="number" class="square-input" min="0" max="9" id="o_element81" name="o_element81"  required> </td> <td><input type="number" class="square-input" min="0" max="9" id="o_element82" name="o_element82"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element83" name="o_element83"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element84" name="o_element84"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element85" name="o_element85"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element86" name="o_element86"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element87" name="o_element87"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element88" name="o_element88"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element89" name="o_element89"  required></td>
+            </tr>
+
+            <tr>
+                <td><input type="number" class="square-input" min="0" max="9" id="o_element91" name="o_element91"  required> </td> <td><input type="number" class="square-input" min="0" max="9" id="o_element92" name="o_element92"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element93" name="o_element93"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element94" name="o_element94"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element95" name="o_element95"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element96" name="o_element96"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element97" name="o_element97"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element98" name="o_element98"  required></td> <td><input type="number" class="square-input" min="0" max="9" id="o_element99" name="o_element99"  required></td>
+            </tr>
+        </table>
+        </div>
+        <button class="my-button" id="Solve" onclick="SudokuSolver()"> Solve </button>
+        <button class="my-button" id="Reset" onclick="ResetGrid()"> Reset </button> <br/>
+
+    </body>
+</html>
